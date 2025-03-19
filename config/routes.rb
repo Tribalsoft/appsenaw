@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   get "index" => "animals#reg1"
   get "reg2" => "animals#reg2"
+  get "home" => "home#wellcome"
+  devise_for :users
   resources :cars
   resources :animals
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
